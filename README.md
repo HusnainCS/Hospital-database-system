@@ -12,11 +12,11 @@ A complete Hospital Database System featuring Entity-Relationship (ER) & Data Fl
 ## Project Structure
 
 ```
-Diagrams/         # DFD & ER diagram images
-Schema/           # Database schema (SQL)
+Diagrams/         # DFD & ER diagrams
+Schema/           # Hospital Schema (SQL)
 Script/           # Dummy data generation script
 Dashboard/        # Streamlit dashboard code
-docs/             # Additional documentation
+
 ```
 
 ## Diagrams
@@ -36,17 +36,17 @@ docs/             # Additional documentation
    ```
 
 2. **Set up the database:**
-   - Use the SQL schema in `schema/schema.sql` to create your database.
+   - Use the SQL schema in `Schema/Hospital_Schema.sql` to create your database.
 
 3. **Generate Dummy Data:**
    ```bash
-   cd script
+   cd Script
    python dummy_data.py
    ```
 
 4. **Install Dashboard Requirements:**
    ```bash
-   cd dashboard
+   cd Dashboard
    pip install -r requirements.txt
    ```
 
