@@ -1,6 +1,6 @@
-
 import psycopg2
 import psycopg2.extras
+
 
 DB_HOST = "localhost"
 DB_NAME = "hospital_db"
