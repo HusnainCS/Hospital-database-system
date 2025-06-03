@@ -1,20 +1,15 @@
-import os
+
 import psycopg2
 import psycopg2.extras
 
-DB_HOST = os.environ.get("DB_HOST")
-DB_NAME = os.environ.get("DB_NAME")
-DB_USER = os.environ.get("DB_USER")
-DB_PASS = os.environ.get("DB_PASSWORD")
-DB_PORT = os.environ.get("DB_PORT", 5432)  # default Postgres port
+DB_HOST = "localhost"
+DB_NAME = "hospital_db"
+DB_USER = "hospital_db"
+DB_PASS = "redgroup123"
 
 def get_connection():
     return psycopg2.connect(
-        host=DB_HOST,
-        dbname=DB_NAME,
-        user=DB_USER,
-        password=DB_PASS,
-        port=DB_PORT
+        host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASS
     )
 def fetch_query(query, params=None):
     conn = get_connection()
