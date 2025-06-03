@@ -1,16 +1,16 @@
 import psycopg2
 import psycopg2.extras
-
-
-DB_HOST = "localhost"
-DB_NAME = "hospital_db"
-DB_USER = "hospital_db"
-DB_PASS = "redgroup123"
+import streamlit as st
 
 def get_connection():
     return psycopg2.connect(
-        host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASS
+        host=st.secrets["DB_HOST"],
+        dbname=st.secrets["DB_NAME"],
+        user=st.secrets["DB_USER"],
+        password=st.secrets["DB_PASS"],
+        sslmode='require'
     )
+
 def fetch_query(query, params=None):
     conn = get_connection()
     cur = conn.cursor()
