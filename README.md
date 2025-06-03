@@ -40,13 +40,13 @@ docs/             # Additional documentation
 
 3. **Generate Dummy Data:**
    ```bash
-   cd script
+   cd Script
    python dummy_data.py
    ```
 
 4. **Install Dashboard Requirements:**
    ```bash
-   cd dashboard
+   cd Dashboard
    pip install -r requirements.txt
    ```
 
