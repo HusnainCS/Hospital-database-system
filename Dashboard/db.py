@@ -2,14 +2,15 @@ import psycopg2
 import psycopg2.extras
 
 
-DB_HOST = "localhost"
+DB_HOST = "hospital-db"
 DB_NAME = "hospital_db"
 DB_USER = "hospital_db"
 DB_PASS = "redgroup123"
 
+
 def get_connection():
     return psycopg2.connect(
-        host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASS
+        host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASS,
     )
 def fetch_query(query, params=None):
     conn = get_connection()
