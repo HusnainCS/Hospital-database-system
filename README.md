@@ -35,22 +35,33 @@ Dashboard/        # Streamlit dashboard code
    cd hospital-database-system
    ```
 
-2. **Set up the database:**
-   - Use the SQL schema in `Schema/Hospital_Schema.sql` to create your database.
+2. **Set up the Docker:**
+ First Pull `postgers:latest`.
+```bash
+   docker build -t your_image_name .
+```
+Then create a container.
+```bash
+docker run -d -p 5432:5432 --name hospital_db -e POSTGRES_PASSWORD=your_password postgres
+```
+3. **Set up Dbeaver:**
+   Open DBeaver, click on "New Database Connection", and select **PostgreSQL**.
+   Enter host, port (5432), hospital_db, username, and password; then click **Finish** to connect.
+   Use the SQL schema in `Schema/Hospital_Schema.sql` to create your database.
 
-3. **Generate Dummy Data:**
-   ```bash
+4. **Generate Dummy Data:**
+   ```bash 
    cd Script
    python dummy_data.py
    ```
 
-4. **Install Dashboard Requirements:**
+5. **Install Dashboard Requirements:**
    ```bash
    cd Dashboard
    pip install -r requirements.txt
    ```
 
-5. **Run the Dashboard:**
+6. **Run the Dashboard:**
    ```bash
    streamlit run Dashboard.py
    ```
