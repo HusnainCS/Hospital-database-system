@@ -2,7 +2,7 @@ import psycopg2
 import psycopg2.extras
 
 
-DB_HOST = "hospital-db"
+DB_HOST = "localhost"
 DB_NAME = "hospital_db"
 DB_USER = "hospital_db"
 DB_PASS = "redgroup123"
